@@ -1,0 +1,110 @@
+---
+title: "OS: Application Interaction"
+revealOptions:
+    background-color: 'aquamarine'
+    transition: 'none'
+    slideNumber: true
+    autoAnimateDuration: 0.0
+---
+
+# Application Interation
+
+---
+
+## Intro
+
+* Applications: standalone or collaborative
+* Examples:
+    - trivial "hello world" application
+    - application that reads data and writes data (text editor, compiler)
+    - a text messenger application
+    - the google search engine
+
+* Are the first 2 examples scenarios of application interaction?
+----
+
+## Demo - Waze Application
+
+* Image with how Waze interacts with other services
+
+----
+## Demo - Gdrive Application
+
+* Image with Gdrive architecture
+
+----
+* This interaction is done between coupled or decoupled applications
+* We distinguish between:
+    - interaction of applications on the same system
+    - interaction of applications on different systems
+* Applications may communicate
+
+----
+
+## How do Apps Interact?
+
+* An application that strives to communicate with other applications must offer an interface.
+* The application may offer a user interface.
+* TODO: image with user-app interface, app-app interface (on same system and on remote systems)
+
+----
+
+## OS - The Lawmaker
+
+* The OS offers the primitives for app-app intercation
+* The OS is like a lawmaker the dictates how the interaction takes place
+* TODO: image with user-app, app-app interface on top of OS (same/remote system)
+
+---
+
+## App Classification
+
+- Uni-process (single/multi threaded)
+- Multi-process
+- Examples
+- These apps use OS primitives to communicate between them
+
+---
+
+## Interaction Models
+
+- Inter-application
+- Intra-application
+- Communication channel
+- Shared memory
+
+----
+
+## Communication channel
+
+- TODO: img
+- messages, packets
+- sender receiver
+- OS does the transmitting
+- requires communication protocol
+- used for inter-application interaction, but could be used for intr-app communication also
+
+----
+
+## Shared memory
+
+- TODO: img
+- apps have a common memory region they use to communicate
+- OS sets up the memory
+- requires synchronization
+- used primarily by intra-app applications
+
+---
+
+## Operating System Interface for App Communication
+
+----
+
+## Communication channel
+
+* send/receive interface
+* notify/wait
+
+
+---
+
