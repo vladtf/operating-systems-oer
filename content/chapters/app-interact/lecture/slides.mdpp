@@ -61,6 +61,8 @@ revealOptions:
 
 - Uni-process (single/multi threaded)
 - Multi-process
+- Multi-threaded
+- Multi-system
 - Examples
 - These apps use OS primitives to communicate between them
 
@@ -82,7 +84,7 @@ revealOptions:
 - sender receiver
 - OS does the transmitting
 - requires communication protocol
-- used for inter-application interaction, but could be used for intr-app communication also
+- used for inter-application interaction, but could be used for intra-app communication also
 
 ----
 
@@ -102,9 +104,27 @@ revealOptions:
 
 ## Communication channel
 
-* send/receive interface
-* notify/wait
+- send/receive interface
+- notify/wait
+- socket, named/anonymous pipes, signals
+- suitable for any multisystem, multiprocess, uniprocess application
+- demo with each
 
+----
 
+## Shared memory
+
+- a common area between entities
+- virtual address space between threads
+- shared memory between processes processes
+- demo with each
 ---
 
+## Case study: Our own server
+
+- uniprocess server, simply sends the time
+- multithreaded server, uses threads to send back the time
+- multiprocess server: sends the time or starts a process that does something
+- multisystem: using a middleware 
+
+---
