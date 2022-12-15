@@ -7,7 +7,7 @@ revealOptions:
     autoAnimateDuration: 0.0
 ---
 
-# Application Interation
+# Application Interaction
 
 ---
 
@@ -117,47 +117,42 @@ int main ()
 
 ----
 
-* This interaction is done between coupled or decoupled applications
-* We distinguish between:
-    - interaction of applications on the same system
-    - interaction of applications on different systems
-* Applications may communicate
-
-----
-
 ## How do Apps Interact?
 
-* An application that strives to communicate with other applications must offer an interface.
-* The application may offer a user interface.
-* TODO: image with user-app interface, app-app interface (on same system and on remote systems)
+* An application that strives to communicate with the outside must offer an interface
+* Applications typically offer user interfaces. These may be used by other programs.
+* TODO: image with an application that may interact with the user, but the same interface may be used by other programs (similar to exhibit 3)
+* However, the OS offers primitives to simplify app interactions
 
 ----
 
 ## OS - The Lawmaker
 
-* The OS offers the primitives for app-app intercation
+* The OS offers the primitives for app-app interaction
 * The OS is like a lawmaker the dictates how the interaction takes place
-* TODO: image with user-app, app-app interface on top of OS (same/remote system)
+* TODO: a diagram where we have 2 applications that may have a user interface, but also communicate through the OS
 
 ---
 
 ## App Classification
 
-- Uni-process (single/multi threaded)
-- Multi-process
-- Multi-threaded
-- Multi-system
-- Examples
-- These apps use OS primitives to communicate between them
+* Uni-process (single/multi threaded)
+* Multi-process
+* Multi-threaded
+* Multi-system
+* TODO: a diagram that contains all of these.
+* Examples
+* These apps use OS primitives to communicate between them
 
 ---
 
 ## Interaction Models
 
-- Inter-application
-- Intra-application
-- Communication channel
-- Shared memory
+* Inter-application
+* Intra-application
+* Communication channel
+* Shared memory
+* TODO: diagram for inter/intra application interaction
 
 ----
 
@@ -188,11 +183,10 @@ int main ()
 
 ## Communication channel
 
-- send/receive interface
-- notify/wait
 - socket, named/anonymous pipes, signals
 - suitable for any multisystem, multiprocess, uniprocess application
-- demo with each
+- TODO: demo with socket communication (simplest form), named/anonymous pipes, signals
+- Highlight differences: pros/cons for each approach
 
 ----
 
@@ -201,14 +195,20 @@ int main ()
 - a common area between entities
 - virtual address space between threads
 - shared memory between processes processes
-- demo with each
+- TODO: demo with shared memory between threads, demo with shared memory between processes (inter/intra app).
 ---
 
 ## Case study: Our own server
 
-- uniprocess server, simply sends the time
-- multithreaded server, uses threads to send back the time
-- multiprocess server: sends the time or starts a process that does something
-- multisystem: using a middleware 
+- uniprocess server, simply sends a magic number
+- multithreaded server, uses threads to send back the magic number
+- multiprocess server: computes the magic number using multiple processes or can send back the current time (depending on user input)
+- multisystem: using a middleware
+- TODO: demos with all the above
+
+---
+## Bonus: High-level implementations
+
+- python demo of API
 
 ---
