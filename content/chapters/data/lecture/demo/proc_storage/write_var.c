@@ -7,7 +7,7 @@ void main(int argc, char* argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: ./write_var addr");
+        printf("Usage: ./write_var addr\n");
         exit(0);
     }
     unsigned long int addr = strtoul(argv[1], NULL, 16);
