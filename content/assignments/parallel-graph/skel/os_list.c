@@ -49,5 +49,9 @@ os_list_node_t *queue_get(os_queue_t *queue)
     target = queue->first;
     queue->first = queue->first->next;
 
+    if (queue->first == NULL) {
+        queue->last = NULL;
+    }
+
     return target;
 }
